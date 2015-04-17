@@ -1,0 +1,141 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    tools:context="com.android.simt.MainActivity" >
+    
+    <LinearLayout 
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:background="@color/deepskyblue" >
+        
+        <Button 
+	        android:id="@+id/sd_check_bt"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:paddingLeft="5dp"
+	        android:paddingRight="5dp"
+	        android:background="@drawable/image_button_selector"
+	        android:text="SD Check"
+	        android:textColor="@color/white"
+	        android:textStyle="bold"
+	        android:textSize="20dp"
+	        android:onClick="onSDCheckBtClicked"/>
+        
+    </LinearLayout>
+
+    <TextView 
+        android:id="@+id/msg_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_layout"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp"
+        android:text="MSG:"/>
+    
+    <ScrollView 
+        android:id="@+id/msg_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_below="@id/msg_title_tv"
+        android:background="@color/white">
+        
+    <TextView
+        android:id="@+id/msg_tv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white" />
+    
+    </ScrollView>
+    
+    <Button 
+        android:id="@+id/clear_msg_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/msg_scrollview"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:text="Clear"
+        android:onClick="onClearBtClicked"/>
+    
+    <LinearLayout 
+        android:id="@+id/cmd_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/clear_msg_bt"
+        android:layout_marginTop="10dp">
+        
+        <TextView 
+	        android:id="@+id/cmd_title_tv"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="CMD:"
+	        android:layout_gravity="left"/>
+        
+        <Spinner 
+            android:id="@+id/cmd_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"/>
+        
+        <Button 
+            android:id="@+id/send_cmd_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="Send"
+            android:onClick="onSendBtClicked"/>
+        
+    </LinearLayout>
+    
+    <Button 
+        android:id="@+id/load_cmd_bt"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/cmd_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Load CMD"
+        android:onClick="onLoadCMDBtClicked"/>
+    
+<!--     <Button 
+        android:id="@+id/is_patched_bt"
+        android:layout_toRightOf="@id/load_cmd_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_below="@id/cmd_layout"
+        android:text="NeedPatched"
+        android:onClick="onIsPatchedBtClicked"/> -->
+    
+    <LinearLayout 
+        android:id="@+id/bottom_lout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:background="@color/deepskyblue" >
+        
+        <Button 
+	        android:id="@+id/new_cmd_bt"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:paddingLeft="5dp"
+	        android:paddingRight="5dp"
+	        android:background="@drawable/image_button_selector"
+	        android:text="New CMD"
+	        android:textColor="@color/white"
+	        android:textStyle="bold"
+	        android:textSize="20dp"
+	        android:onClick="onNewCMDBtClicked"/>
+        
+    </LinearLayout>
+    
+</RelativeLayout>
